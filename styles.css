@@ -1,0 +1,104 @@
+:root {
+    --font: "Work Sans", sans-serif;
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--Purple-100);
+}
+
+picture img {
+    inline-size: 100%;
+    position: relative;
+}
+
+article {
+    background-color: var(--White);
+    border-radius: 1.5rem;
+    padding-inline: clamp(2.3rem, 5vw, 3.7rem);
+    padding-block: clamp(2.7rem, 5vw, 5rem);
+    position: absolute;
+    top: clamp(14.3rem, 30vw, 16.8rem);
+    left: 50%;
+    transform: translateX(-50%);
+    inline-size: clamp(32.8rem, 80vw, 60.3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    display: flex;
+    gap: 2.3rem;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 700;
+    color: var(--Purple-950);
+}
+
+.title img {
+    inline-size: clamp(2rem, 5vw, 3.7rem);
+    block-size: auto;
+}
+
+
+.question-container .question {
+    font-size: 1.5rem;
+    color: var(--Purple-950);
+    inline-size: clamp(20rem, 40vw, 100%);
+    font-weight: 600;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question-container .question:hover {
+    color: rgb(117, 21, 144);
+}
+
+.question-container img {
+    inline-size: 2.6rem;
+    cursor: pointer;
+}
+
+article .answer {
+    font-size: 1.4rem;
+    color: var(--Purple-600);
+    line-height: 2rem;
+    inline-size: clamp(27.2rem, 50vw, 100%);
+    margin-block-start: 2.3rem;
+}
+
+hr {
+    border: none;
+    inline-size: 100%;
+    block-size: 0.1rem;
+    background-color: rgb(236, 234, 234);
+    margin-block-start: 2.3rem;
+}
+
+/* Aditional Classes */
+.is-hidden {
+    display: none;
+}
